@@ -1,7 +1,7 @@
 # GeekTech Notes App lesson
 ### Project themes: Basic architecture, [ViewPager](#header-viewpager), [Recycler](#header-recycler), [Realm](#header-realm), [SharedPreferences](#header-shared).
 
-## Tasks:
+### Tasks:
    * Создать [Fork](#header_fork) репозитория у себя на аккаунте
    * 'Intro screen' - три фрагмента(любых, которые на ваш взгляд максимально описывают плюсы и пользу приложение) во [ViewPager](#header-viewpager) с кнопками 'Next' и 'Finish'
    * Открывать 'MainActivity' на 'Finish' Intro screen
@@ -11,11 +11,12 @@
 
 
 #### Если вдруг что то будет не понятно следуйте меткам TODO
-#### P.S. Можете самостоятельно добавлять доп. сло и использовать любые технологии и библиотеки
-    
-    
+#### P.S. Можете самостоятельно добавлять доп. слои, использовать любые технологии и библиотеки
+        
 #### <a name="header_fork">[Статья с объяснением что такое Fork на Github](http://gearmobile.github.io/git/fork-github/)</a>
 
+#### Libraries:
+   * [Stepper Indicator](https://github.com/badoualy/stepper-indicator?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=3711) - библиотека для отображения текущего прогресса ViewPager-a
 
 #### <a name="header-viewpager"></a>ViewPager:
 
@@ -24,7 +25,7 @@
 
 
 #### <a name="header-shared"></a>SharedPreferences:
-
+- [Оффициальная документация](https://developer.android.com/training/data-storage/shared-preferences)
 
 #### <a name="header_recycler"></a>Recycler:
 - [Оффициальная документация](https://developer.android.com/guide/topics/ui/layout/recyclerview)

@@ -3,4 +3,9 @@
     <string name="title_activity_intro">IntroActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="fragment_first">Добро пожаловать в приложение для заметок!</string>
+    <string name="fragment_second">нет необходимости держать все в голове</string>
+    <string name="fragment_third">ваша жизнь в вашем телефонe!</string>
+    <string name="next">NEXT</string>
+    <string name="skip">skip</string>
 </resources>

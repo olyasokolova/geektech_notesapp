@@ -15,15 +15,15 @@
         <activity
             android:name=".presentation.intro.IntroActivity"
             android:label="@string/title_activity_intro"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.Fullscreen" >
+        </activity>
+
+        <activity android:name=".presentation.launch.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity android:name=".presentation.launch.LaunchActivity">
         </activity>
 
         <activity android:name=".presentation.main.MainActivity" />

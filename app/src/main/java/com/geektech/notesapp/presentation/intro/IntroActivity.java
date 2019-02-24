@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.badoualy.stepperindicator.StepperIndicator;
 import com.geektech.notesapp.R;
 import com.geektech.notesapp.presentation.main.MainActivity;
+import com.geektech.util.SharedStorageImpl;
 
 public class IntroActivity extends AppCompatActivity
     implements View.OnClickListener {
@@ -31,6 +32,9 @@ public class IntroActivity extends AppCompatActivity
     private TextView mNextBtn;
     private Button mSkipBtn;
 
+    private static String PREF_FIRST_LAUNCH = "first_launch";
+    private SharedStorageImpl sharedPreferences;
+
     public static void start(Activity activity) {
         activity.startActivity(new Intent(activity, IntroActivity.class));
     }
@@ -38,9 +42,19 @@ public class IntroActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
 
-        init();
+        sharedPreferences =new SharedStorageImpl(this,PREF_FIRST_LAUNCH);
+
+        if (isFirstLaunch()) {
+            setContentView(R.layout.activity_intro);
+
+            firstLaunch();
+
+            init();
+        } else {
+            MainActivity.start(this);
+            finish();
+        }
     }
 
     //region Init
@@ -189,4 +203,18 @@ public class IntroActivity extends AppCompatActivity
             textView.setText(getArguments().getInt(ARG_TEXT_RES_ID));
         }
     }
+
+    //region Shared Preferences
+
+    private boolean isFirstLaunch() {
+        if (sharedPreferences.contains(PREF_FIRST_LAUNCH)){
+            return sharedPreferences.get(PREF_FIRST_LAUNCH,true);}
+        return true;
+    }
+
+    private void firstLaunch() {
+        sharedPreferences.set(PREF_FIRST_LAUNCH,false);
+    }
+
+    //endregion
 }
